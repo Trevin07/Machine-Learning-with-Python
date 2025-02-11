@@ -12,4 +12,5 @@ Welcome to my **Machine Learning Repository**, where I explore various ML techni
 
 ![Screenshot](screenshot1.png)
 ![Screenshot](screenshot2.png)
+![Decision Boundary](Decision%20boundary.png)
 
