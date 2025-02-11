@@ -11,5 +11,5 @@ Welcome to my **Machine Learning Repository**, where I explore various ML techni
 - 🔹 **End-to-End ML Pipelines & Deployment**  
 
 ![Screenshot](screenshot1.png)
-![Screenshot](./screenshot2.jpg)
+![Screenshot](screenshot2.jpg)
 
