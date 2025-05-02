@@ -10,6 +10,7 @@ Welcome to my **Machine Learning Repository**, where I explore various ML techni
 - 🔹 **Model Optimization & Hyperparameter Tuning**  
 - 🔹 **End-to-End ML Pipelines & Deployment**  
 
+![Screenshot](screenshot.png)
 ![Screenshot](screenshot1.png)
 ![Screenshot](screenshot2.png)
 ![Decision Boundary](Decision%20boundary.png)
