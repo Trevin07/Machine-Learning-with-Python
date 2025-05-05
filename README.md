@@ -11,6 +11,11 @@ Here, you'll find a collection of hands-on projects where I explore real-world p
 An ML model that estimates the cost of living based on inputs like housing, food, healthcare, etc.  
 ✔️ Includes model training, predictions, and deployment-ready Flask app.
 
+
+### 🏠 `Predicting house prices using machine learning.ipynb`
+Predicts house prices using regression techniques.  
+Good example of feature selection and model tuning.
+
 ### 📈 `stock-market-predictor.ipynb`
 Predicts stock market trends using machine learning techniques.  
 Focus on regression models and time series analysis.
@@ -25,19 +30,14 @@ Performs Exploratory Data Analysis and applies the K-Nearest Neighbors algorithm
 ### 🔐 `Fraud Detection Using Support Vector Machines.ipynb`
 Uses SVM to detect fraudulent activities in a financial dataset.
 
-### 🌳 `Machine learning - Decision Trees.ipynb`
-Demonstrates how decision trees work with examples and visualizations.
-
-### 🏠 `Predicting house prices using machine learning.ipynb`
-Predicts house prices using regression techniques.  
-Good example of feature selection and model tuning.
-
 ### 📚 `fcc_book_recommendation_knn.ipynb`
 A book recommendation system using collaborative filtering with KNN.
 
 ### 📱 `fcc_sms_text_classification.ipynb`
 Classifies SMS messages as spam or ham using Natural Language Processing and Machine Learning.
 
+### 🌳 `Machine learning - Decision Trees.ipynb`
+Demonstrates how decision trees work with examples and visualizations.
 ---
 
 ## 🛠 Tech Stack
