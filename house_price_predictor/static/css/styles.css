@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/static/images/house.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Users/trevinrodrigo/Desktop/house price predictor/static/images/house.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.6);
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1rem;
+    color: #FFD700;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+input, select {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 1px solid #FFD700;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+.submit-btn {
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5);
+}
+
+.submit-btn:hover {
+    background-color: #FFC107;
+    transform: translateY(-3px);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #FFD700;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
