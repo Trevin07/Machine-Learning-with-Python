@@ -1,2 +1,2 @@
-# House price Predictor
-This folder contains a model that estimates the House price in Bengaluru.
+# House-price-prediction
+A Flask app that predicts house prices using a pre-trained ML model
