@@ -12,7 +12,7 @@ An ML model that estimates the cost of living based on inputs like housing, food
 ✔️ Includes model training, predictions, and deployment-ready Flask app.
 
 
-### 🏠 `Predicting house prices using machine learning.ipynb`
+### 🏠 `Predicting house prices using regression.ipynb`
 Predicts house prices using regression techniques.  
 Good example of feature selection and model tuning.
 
