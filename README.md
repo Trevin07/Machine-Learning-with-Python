@@ -55,6 +55,9 @@ Demonstrates how decision trees work with examples and visualizations.
 - 🔹 **Model Optimization & Hyperparameter Tuning**  
 - 🔹 **End-to-End ML Pipelines & Deployment**  
 
+
+![Screenshot](screenshoth1.png)
+![Screenshot](screenshoth2.png)
 ![Screenshot](screenshot.png)
 ![Screenshot](screenshot1.png)
 ![Screenshot](screenshot2.png)
