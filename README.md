@@ -7,6 +7,11 @@ Here, you'll find a collection of hands-on projects where I explore real-world p
 
 ## 📁 Project Highlights
 
+### 🏥 `hospital-readmission-predictor`  
+Predicts whether a patient is at risk of being readmitted to the hospital using key clinical and demographic inputs.  
+✔️ Flask web app powered by a trained Random Forest model with real-time predictions and user-friendly UI.
+
+
 ### 📊 `cost_estimator`
 An ML model that estimates the cost of living based on inputs like housing, food, healthcare, etc.  
 ✔️ Includes model training, predictions, and deployment-ready Flask app.
