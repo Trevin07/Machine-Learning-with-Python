@@ -17,11 +17,11 @@ An ML model that estimates the cost of living based on inputs like housing, food
 ✔️ Includes model training, predictions, and deployment-ready Flask app.
 
 
-### 🏠 `Predicting house prices using regression.ipynb`
+### 🏠 `Predicting house prices using regression`
 Predicts house prices using regression techniques.  
 Good example of feature selection and model tuning.
 
-### 📈 `stock-market-predictor.ipynb`
+### 📈 `stock-market-predictor`
 Predicts stock market trends using machine learning techniques.  
 Focus on regression models and time series analysis.
 
@@ -29,19 +29,19 @@ Focus on regression models and time series analysis.
 Predicts if a person’s income is above or below a certain threshold using demographic and financial features.  
 Includes label encoding, model evaluation, and export using `joblib`.
 
-### 🔍 `EDA on a dataset using K-NN.ipynb`
+### 🔍 `EDA on a dataset using K-NN`
 Performs Exploratory Data Analysis and applies the K-Nearest Neighbors algorithm to a classification problem.
 
-### 🔐 `Fraud Detection Using Support Vector Machines.ipynb`
+### 🔐 `Fraud Detection Using Support Vector Machines`
 Uses SVM to detect fraudulent activities in a financial dataset.
 
-### 📚 `fcc_book_recommendation_knn.ipynb`
+### 📚 `fcc_book_recommendation_knn`
 A book recommendation system using collaborative filtering with KNN.
 
-### 📱 `fcc_sms_text_classification.ipynb`
+### 📱 `fcc_sms_text_classification`
 Classifies SMS messages as spam or ham using Natural Language Processing and Machine Learning.
 
-### 🌳 `Machine learning - Decision Trees.ipynb`
+### 🌳 `Machine learning - Decision Trees`
 Demonstrates how decision trees work with examples and visualizations.
 ---
 
