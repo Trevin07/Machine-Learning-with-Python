@@ -1,4 +1,4 @@
-# 🚀 Machine Learning Projects by Trevin07
+# 🚀 Machine Learning Projects by Trevin Rodrigo🤖
 
 Welcome to my Machine Learning repository!  
 Here, you'll find a collection of hands-on projects where I explore real-world problems using popular ML techniques. The notebooks cover data preprocessing, training models, evaluating performance, and sometimes even deployment.
