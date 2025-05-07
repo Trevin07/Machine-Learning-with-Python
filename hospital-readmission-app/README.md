@@ -1,22 +1,95 @@
-# 🏥 Hospital Readmission Risk Predictor
+<h1>🏥 Hospital Readmission Risk Predictor</h1>
 
-A Flask web app that predicts whether a patient is likely to be readmitted to the hospital based on demographic and clinical features using a trained Random Forest model.
+<p>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python" alt="Python" width="120"/>
+  </a>
+  <a href="https://flask.palletsprojects.com/">
+    <img src="https://img.shields.io/badge/Flask-2.0%2B-grey?style=flat-square&logo=flask" alt="Flask" width="120"/>
+  </a>
+  <a href="https://scikit-learn.org/">
+    <img src="https://img.shields.io/badge/scikit--learn-1.6.1-green?style=flat-square&logo=scikit-learn" alt="scikit‑learn" width="120"/>
+  </a>
+</p>
+<p>
+  <a href="https://pandas.pydata.org/">
+    <img src="https://img.shields.io/badge/pandas-1.5.3-blue?style=flat-square&logo=pandas" alt="pandas" width="120"/>
+  </a>
+  <a href="https://numpy.org/">
+    <img src="https://img.shields.io/badge/NumPy-1.25.0-lightgrey?style=flat-square&logo=numpy" alt="NumPy" width="120"/>
+  </a>
+</p>
+<p>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">
+    <img src="https://img.shields.io/badge/HTML5-E34F26-orange?style=flat-square&logo=html5" alt="HTML5" width="120"/>
+  </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+    <img src="https://img.shields.io/badge/CSS3-1572B6-blue?style=flat-square&logo=css3" alt="CSS3" width="120"/>
+  </a>
+  <a href="https://fontawesome.com/">
+    <img src="https://img.shields.io/badge/Font_Awesome-6.5.0-purple?style=flat-square&logo=fontawesome" alt="Font Awesome" width="120"/>
+  </a>
+</p>
+<p>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License" width="120"/>
+  </a>
+</p>
+
+
+This is a **Flask-based machine learning web application** that predicts whether a patient is at risk of being readmitted to the hospital. It uses a **trained Random Forest model** to provide real-time insights based on key clinical and demographic inputs.
 
 ---
 
 ## 📋 Features
 
-* **User-friendly form** to capture patient details:
+- 🔘 **User‑friendly form** to capture patient details:
+  - Age, Gender, Primary Diagnosis Code  
+  - Number of Procedures, Days in Hospital  
+  - Number of Existing Health Conditions, Discharge Code
 
-  * Age, Gender, Primary Diagnosis
-  * Number of Procedures, Days in Hospital
-  * Number of Existing Health Conditions, Discharge Destination
-* **Real-time prediction** of readmission risk
-* **Color-coded result**: 🔴 High risk (Likely to be readmitted), 🟢 Low risk (Unlikely to be readmitted)
-* **Summary of entered details** for verification
-* **Responsive dark-themed UI** with icons and animations
+- ⚡ **Real‑time prediction** of hospital readmission risk using a Random Forest Classifier
+
+- 🟢🔴 **Color-coded results**:
+  - 🔴 High Risk – Likely to be readmitted  
+  - 🟢 Low Risk – Unlikely to be readmitted
+
+- 📑 **Summary of patient input** for easy verification
+
+- 🌙 **Dark-themed, responsive UI** with smooth animations and medical icons
+
+- 🛡️ **Robust error handling** to manage missing or invalid input
+
+- 🧩 **Modular codebase** for easy integration and customization
 
 ---
+
+## 🧠 Machine Learning Model
+
+- **Model Type**: Random Forest Classifier  
+- **Framework**: Scikit-learn  
+- **Training Data**: Historical hospital readmission dataset (not included here)  
+- **Target Variable**: Binary classification (0 = No readmission, 1 = Readmitted)
+
+The model is pre-trained and stored as a `.pkl` file (`rf_model.pkl`) located in the `/model` directory.
+
+---
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer              | Technology / Library              |
+| ------------------ | --------------------------------- |
+| **Backend**        | Python, Flask                     |
+| **ML Framework**   | scikit‑learn (RandomForestClassifier) |
+| **Data Handling**  | pandas, numpy                     |
+| **Frontend**       | HTML5, CSS3, Font Awesome         |
+| **Deployment**     | Flask development server          |
+| **Version Control**| Git, GitHub                       |
+
+---
+
 
 ## 🚀 Getting Started
 
@@ -49,10 +122,10 @@ A Flask web app that predicts whether a patient is likely to be readmitted to th
 
 ## 📸 Screenshots
 
-<p align="center">
-  <img src="static/screenshot1.png" alt="Input Form" width="250" />
-  <img src="static/screenshot2.png" alt="Prediction Result" width="250" />
-  <img src="static/screenshot3.png" alt="Advice Section" width="250" />
+
+  <img src="static/screenshot1.png" alt="Input Form" width="100%" />
+  <img src="static/screenshot2.png" alt="Prediction Result" width="100%" />
+  <img src="static/screenshot3.png" alt="Advice Section" width="100%" />
 </p>
 
 ---
