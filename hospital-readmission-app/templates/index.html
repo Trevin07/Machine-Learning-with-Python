@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hospital Readmission Predictor</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=4" />
+</head>
+<body>
+
+<!-- Top-left medical symbol -->
+<div style="position: absolute; top: 20px; left: 20px; font-size: 80px; color: #00bfff;">
+  <i class="fas fa-user-md"></i>
+</div>
+
+
+<div class="form-wrapper">
+  <div class="form-box">
+    <h2><i class="fas fa-hospital-symbol me-2"></i> Hospital Readmission Risk</h2>
+    <p class="subtitle">Fill in the patient details below</p>
+
+    <form action="/predict" method="post" onsubmit="showSpinner()">
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" name="age" required />
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Primary Diagnosis</label>
+        <select name="primary_diagnosis" required>
+          <option value="">Select</option>
+          <option value="Heart Disease">Heart Disease</option>
+          <option value="COPD">COPD</option>
+          <option value="Diabetes">Diabetes</option>
+          <option value="Kidney Disease">Kidney Disease</option>
+          <option value="Hypertension">Hypertension</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Number of Procedures</label>
+        <input type="number" name="num_procedures" required />
+      </div>
+
+      <div class="form-group">
+        <label>Days in Hospital</label>
+        <input type="number" name="days_in_hospital" required />
+      </div>
+
+      <div class="form-group">
+        <label>Number of Existing Health Conditions</label>
+        <input type="number" name="comorbidity_score" required />
+      </div>
+
+      <div class="form-group">
+        <label>Discharge To</label>
+        <select name="discharge_to" required>
+          <option value="">Select</option>
+          <option value="Home Health Care">Home Health Care</option>
+          <option value="Rehabilitation Facility">Rehabilitation Facility</option>
+          <option value="Skilled Nursing Facility">Skilled Nursing Facility</option>
+          <option value="Home">Home</option>
+        </select>
+      </div>
+
+      <button type="submit" id="submit-btn">
+        <i class="fas fa-stethoscope"></i>
+        <span id="btn-text"> Predict</span>
+        <span id="spinner" class="spinner hidden"></span>
+      </button>
+    </form>
+
+    <footer>
+      &copy; 2025 Hospital Predictor | 
+      <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #ffffff;">MIT License</a>
+    </footer>
+  </div>
+</div>
+
+<script>
+  function showSpinner() {
+    document.getElementById("spinner").classList.remove("hidden");
+    document.getElementById("btn-text").textContent = " Predicting...";
+  }
+</script>
+
+</body>
+</html>

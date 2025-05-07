@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prediction Result</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #1c2541, #1e517d);
+      color: #ecf0f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .medical-symbol {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 80px;
+      color: #00bfff;
+      z-index: 9999;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .content {
+      background-color: #1c2541;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      position: relative;
+    }
+
+    .badge {
+      font-size: 30px;
+      color: #ffffff;
+      background-color: #2d8bd8;
+      padding: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #1e90ff;
+      font-size: 2.25rem;
+      margin: 15px 0 10px;
+    }
+
+    .subtitle {
+      color: #a0b4e3;
+      margin-bottom: 25px;
+    }
+
+    .result-box {
+      background-color: #0c1620;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
+
+    .result-heading {
+      font-size: 1.5rem;
+      color: #2d8bd8;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .result-message {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .additional-info {
+      font-size: 1rem;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    .input-details {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .input-details h4 {
+      color: #2d8bd8;
+      margin-bottom: 15px;
+      font-size: 1.25rem;
+    }
+
+    .input-details dl {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+    }
+
+    .input-details dt {
+      font-weight: 500;
+      color: #a0b4e3;
+    }
+
+    .input-details dd {
+      margin: 0;
+      color: #ecf0f1;
+    }
+
+    .btn {
+      background-color: #3e89c1;
+      color: #ffffff;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-align: center;
+      width: 160px;
+      margin: 30px auto 0;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2c7ab6;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #95a5a6;
+    }
+
+    footer a {
+      color: #9faecd;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Custom Result Colors */
+    .likely {
+      color: #e74c3c; /* Red-Salmon */
+    }
+
+    .unlikely {
+      color: #2ecc71; /* Green */
+    }
+  </style>
+</head>
+<body>
+  <div class="medical-symbol">
+    <i class="fas fa-user-md"></i>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <span class="badge"><i class="fas fa-hospital-symbol"></i></span>
+      <h2>Hospital Readmission Prediction</h2>
+      <p class="subtitle">Below is your predicted result based on the entered medical details.</p>
+      
+      <div class="result-box">
+        <h3 class="result-heading">Your Prediction Result:</h3>
+        <p class="result-message {% if result == 'LIKELY TO BE READMITTED' %}likely{% else %}unlikely{% endif %}">
+          {{ result }}
+        </p>
+
+        {% if result == "LIKELY TO BE READMITTED" %}
+          <p class="additional-info text-warning">
+            You might be at a higher risk of hospital readmission. Please contact your healthcare provider for a detailed follow-up and care plan.
+          </p>
+        {% else %}
+          <p class="additional-info text-success">
+            You're less likely to be readmitted, but it's still important to maintain regular health checkups and follow your care plan.
+          </p>
+        {% endif %}
+
+        <div class="input-details">
+          <h4>Entered Details</h4>
+          <dl>
+            <dt>Age:</dt><dd>{{ age }}</dd>
+            <dt>Gender:</dt><dd>{{ gender }}</dd>
+            <dt>Diagnosis:</dt><dd>{{ primary_diagnosis }}</dd>
+            <dt>Procedures:</dt><dd>{{ num_procedures }}</dd>
+            <dt>Days in Hospital:</dt><dd>{{ days_in_hospital }}</dd>
+            <dt>Existing Conditions:</dt><dd>{{ comorbidity_score }}</dd>
+            <dt>Discharge To:</dt><dd>{{ discharge_to }}</dd>
+          </dl>
+        </div>
+      </div>
+
+      <button class="btn" onclick="window.location.href='/'">
+        <i class="fas fa-arrow-left me-2"></i> Go Back
+      </button>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Hospital Readmission Predictor | 
+         <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
